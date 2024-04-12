@@ -45,10 +45,31 @@ input inputEmployee {
     status: Int
 }
 
+input inputUpdateEmployee {
+    firstname: String
+    lastname: String
+    age: String
+    dateOfJoining: GraphQLDate
+    title: titleType
+    department: departmentType
+    employeeType: defaultEmployeeType
+    status: Int
+}
+
 type Query {
-    employeeList: [typeEmployee!]!
+    employeeList(employeeType: defaultEmployeeType): [typeEmployee!]! 
+
+    oneEmployee(id: Int!): typeEmployee!
+
+    upComingRetirement: [typeEmployee!]!
 }
 
 type Mutation {
     addEmployee(employee: inputEmployee!): typeEmployee!
+
+    updateEmployee(id: Int!, changes: inputUpdateEmployee!): typeEmployee!
+
+    deleteEmployee(id: Int!): Boolean!
+
+    terminateEmployee(id: Int!): Boolean!
 }
