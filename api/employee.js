@@ -104,17 +104,21 @@ const updateEmployee = async (parent, { id, changes }) => {
   return savedEmployee
 }
 
-const getUpComingRetirement = async () => {
+//function for getting upcoming retirements in next 6 months. It will be called when getUpcomingRetirement graphql query will be there from client side... 
+const getUpComingRetirement = async (parent,{ employeeType }) => {
   const database = getDatabase();
   const currentDate = new Date();
   const sixMonthsFromNow = new Date();
   sixMonthsFromNow.setMonth(sixMonthsFromNow.getMonth() + 6);
 
-  const employees = await database.collection('employeeList').find({}).toArray();
+  let filter = {};
+  if (employeeType) filter.employeeType = employeeType;
+
+  const employees = await database.collection('employeeList').find(filter).toArray();
 
   const upcomingRetirements = employees.filter(employee => {
 
-      const retirementAge = 60 - employee.age;
+      const retirementAge = 65 - employee.age;
       const dateOfJoining = new Date(employee.dateOfJoining);
       const retirementDate = new Date(dateOfJoining);
       retirementDate.setFullYear(retirementDate.getFullYear() + retirementAge);

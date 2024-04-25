@@ -18,7 +18,7 @@ class EmployeeSearch extends React.Component {
   
       return (
         <>
-        <h1 style={mainStyle}>Search Employee</h1>
+        <h1 className='mt-3' style={mainStyle}>Search Employee</h1>
         
         <div style={containerStyle}>
           <input style={inputStyle} name="search" placeholder="Search..." />

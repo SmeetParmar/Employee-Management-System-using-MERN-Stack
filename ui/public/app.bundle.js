@@ -328,6 +328,7 @@ var EmployeeCreate = /*#__PURE__*/function (_React$Component) {
         textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)'
       };
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+        className: "mt-3",
         style: mainStyle
       }, "Add New Employee"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
         name: "employeeForm",
@@ -488,107 +489,6 @@ function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-// import React from 'react';
-// import { graphQlFetch } from './graphQlFetch.js';
-
-// class EmployeeDetails extends React.Component {
-
-//   constructor() {
-//     super();
-//     this.state = { }
-//   }
-
-//   componentDidUpdate(prevProps) {
-//     const { id } = this.props.match.params;
-//     const { id: prevId } = prevProps.match.params;
-//     if (id != prevId) {
-//       this.loadData();
-//     }
-//   }
-
-//   componentDidMount() {
-//     this.loadData();
-//   }
-
-//   async loadData() {
-
-//     const { id } = this.props.match.params;
-
-//     const query = `query oneEmployee($id: Int!) {
-//         oneEmployee(id: $id) {
-//             id firstname lastname department title
-//             age employeeType status dateOfJoining
-//       }
-//     }`
-
-//     const result = await graphQlFetch(query,{id});
-
-//     this.setState({employee: result.oneEmployee})
-//   }
-
-//   render() {
-//     const style = {
-//       textAlign: 'center', padding: '10px', border: '1px solid black',width:"300px"
-//     };
-
-//     const tableStyle = {
-//       border: '1px solid black', borderCollapse: 'collapse', width: '100%', margin: '20px auto', width:"500px", justifyContent:"center"
-//     };
-
-//     const headerCellStyle = {
-//       backgroundColor: '#00008b', border: '1px solid black', color: 'white', padding: '10px', textAlign: 'center', width:"200px"
-//     };
-
-//     const mainStyle = { textAlign: 'center', color: '#ff03ee', marginBottom: '30px', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)'};
-//     return (
-//       <div>        
-//         <h1 style={mainStyle}>Employee Detail Of {this.state.employee? this.state.employee.firstname: ''} {this.state.employee? this.state.employee.lastname: ''} </h1>
-//           <table style={tableStyle}>
-//             <tbody>
-//               <tr>
-//                 <td style={headerCellStyle}>ID</td>
-//                 <td style={style}>{this.state.employee? this.state.employee.id: ''}</td>
-//               </tr>
-//               <tr>
-//                 <td style={headerCellStyle}>First Name</td>
-//                 <td style={style}>{this.state.employee? this.state.employee.firstname: ''}</td>
-//               </tr>
-//               <tr>
-//                 <td style={headerCellStyle}>Last Name</td>
-//                 <td style={style}>{this.state.employee? this.state.employee.lastname: ''}</td>
-//               </tr>
-//               <tr>
-//                 <td style={headerCellStyle}>Department</td>
-//                 <td style={style}>{this.state.employee? this.state.employee.department: ''}</td>
-//               </tr>
-//               <tr>
-//                 <td style={headerCellStyle}>Title</td>
-//                 <td style={style}>{this.state.employee? this.state.employee.title: ''}</td>
-//               </tr>
-//               <tr>
-//                 <td style={headerCellStyle}>Age</td>
-//                 <td style={style}>{this.state.employee? this.state.employee.age: ''}</td>
-//               </tr>
-//               <tr>
-//                 <td style={headerCellStyle}>Employee Type</td>
-//                 <td style={style}>{this.state.employee? this.state.employee.employeeType: ''}</td>
-//               </tr>
-//               <tr>
-//                 <td style={headerCellStyle}>Status</td>
-//                 <td style={style}>{this.state.employee? (this.state.employee.status === 1 ? 'Working' : 'Not Working'): ''}</td>
-//               </tr>
-//               <tr>
-//                 <td style={headerCellStyle}>Date Of Joining</td>
-//                 <td style={style}>{this.state.employee? new Date(this.state.employee.dateOfJoining).toLocaleDateString('en-GB',{ year: 'numeric', month: 'short', day: 'numeric' }): ''}</td>
-//               </tr>
-//             </tbody>
-//           </table>
-//       </div>
-//     )
-//   }
-// }
-
-// export default EmployeeDetails
 
 
 
@@ -637,7 +537,7 @@ var EmployeeDetails = /*#__PURE__*/function (_React$Component) {
               }, function () {
                 var employee = _this2.state.employee;
                 if (employee) {
-                  var retirementAge = 60 - parseInt(employee.age);
+                  var retirementAge = 65 - parseInt(employee.age);
                   var dateOfJoining = new Date(employee.dateOfJoining);
                   var retirementDate = new Date(dateOfJoining);
                   retirementDate.setFullYear(retirementDate.getFullYear() + retirementAge);
@@ -920,6 +820,7 @@ var EmployeeDirectory = /*#__PURE__*/function (_React$Component) {
         textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)'
       };
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+        className: "mt-3",
         style: mainStyle
       }, "Employee Table"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_EmployeeFilter_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], {
         filterName: "Employee"
@@ -1376,77 +1277,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Objec
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
-// import React from "react";
-// import { withRouter } from 'react-router-dom';
-
-// class EmployeeFilter extends React.Component {
-//     constructor(props) {
-//         super(props)
-//         const params = new URLSearchParams(this.props.location.search)
-//         this.state = {
-//             type: params.get('type') || '',
-//         }
-//       }
-
-//       componentDidUpdate(prevProps) {
-//         const { search } = this.props.location;
-//         const { search: prevSearch } = prevProps.location;
-//         if (prevSearch !== search) {
-//           this.showOriginalFilter();
-//         }
-//       }
-
-//       showOriginalFilter = () => {
-//         const { search } = this.props.location;
-//         const params = new URLSearchParams(search);
-//         this.setState({
-//           type: params.get('type') || '',
-//         })
-//       }
-
-//     onChangeStatus = (e) => {
-//         const { value } = e.target;
-//         this.setState({ type: value });
-//       }
-
-//       applyFilter = () => {
-//         const { type } = this.state
-//          const { history } = this.props;
-
-//          const params = new URLSearchParams();
-//          if (type) params.set('type', type);
-//          const search = params.toString()? `?${params.toString()}`: '';
-//          history.push({pathname: '/employee', search});
-//        }
-
-//     render() {
-//         const { type } = this.state
-//         const buttonStyle = {
-//           padding: '5px 12px',  backgroundColor: '#00008b', color: 'white', border: 'none'
-//         };
-
-//         const inputStyle = {
-//            padding: '4px 12px', 
-//         };
-//         return (
-//             <div>
-//                 Employement Type: {' '}
-//                 <select style={inputStyle} onChange={this.onChangeStatus} value={type}>
-//                     <option value=''>All</option>
-//                     <option value='PartTime'>Part Time</option>
-//                     <option value='FullTime'>Full Time</option>
-//                     <option value='Seasonal'>Seasonal</option>
-//                     <option value='Contract'>Contract</option>
-//                 </select>
-//                 {'   '}
-//                 <button style={buttonStyle} type="button" onClick={this.applyFilter}>Apply</button>
-//             </div>
-//         );
-//     }
-// }
-
-// export default withRouter(EmployeeFilter);
-
 
 
 
@@ -1541,8 +1371,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/withRouter.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/Link.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/withRouter.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/Link.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Tooltip.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/OverlayTrigger.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "./node_modules/@fortawesome/free-solid-svg-icons/index.mjs");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
@@ -1553,31 +1388,28 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
 
 
 
+
+
 // employee row component which populated data in row of employee table...
-var EmployeeRow = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_1__["default"])(function (props) {
+var EmployeeRow = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_2__["default"])(function (props) {
   var style = props.rowStyle;
   var statusColor = props.employee.status === 1 ? '#45e03a' : 'red';
   var search = props.location.search,
     deleteEmployee = props.deleteEmployee,
     terminateEmployee = props.terminateEmployee,
     index = props.index;
-
-  // const buttonStyle = {
-  //     padding: '5px 15px', fontSize: '16px', backgroundColor: '#ffc400', color: 'white', border: 'none'
-  //   };
-
-  //   const editLinkStyle = {
-  //     padding: '5px 15px', textDecoration: 'none', fontSize: '16px', backgroundColor: '#00ff26', color: 'white', border: 'none'
-  //   };
-
-  //   const detailsLinkStyle = {
-  //     padding: '5px 15px',  textDecoration: 'none', fontSize: '16px', backgroundColor: '#00b3ff', color: 'white', border: 'none'
-  //   };
-
-  //   const terminateButtonStyle = {
-  //     padding: '5px 15px', fontSize: '16px', backgroundColor: '#ff3700', color: 'white', border: 'none'
-  //   };
-
+  var EditTt = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    id: "edit-tooltip",
+    placement: "top"
+  }, "Click here to edit employee");
+  var deleteTt = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    id: "delete-tooltip",
+    placement: "right"
+  }, "Click here to delete employee");
+  var deleteemp = function deleteemp(e) {
+    e.preventDefault();
+    deleteEmployee(index);
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", {
     style: style
   }, props.employee.id), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", {
@@ -1591,23 +1423,49 @@ var EmployeeRow = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_1__["default"])(f
     })
   }, props.employee.status === 1 ? 'Working' : 'Not Working'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", {
     style: style
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    className: "btn btn-success me-1 px-3",
-    to: "/employeeEdit/".concat(props.employee.id)
-  }, "Edit"), '   ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["default"], {
     className: "btn btn-info text-white me-1 px-3",
     to: "/employee/".concat(props.employee.id)
-  }, "All Details"), '   ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-    className: "btn btn-warning text-white me-1 px-3",
-    onClick: function onClick() {
-      return deleteEmployee(index);
-    }
-  }, "Delete Employee"), props.employee.status === 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, '   ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+  }, "All Details"), props.employee.status === 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, '   ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
     className: "btn btn-danger me-1 px-3",
     onClick: function onClick() {
       return terminateEmployee(index);
     }
-  }, "Terminate Employee"))));
+  }, "Terminate Employee")), '   ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    className: "btn me-1 pr-3",
+    to: "/employeeEdit/".concat(props.employee.id)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    placement: "top",
+    delay: {
+      show: 700
+    },
+    overlay: EditTt
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    size: "sm",
+    className: "bg-warning border-0"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
+    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__.faEdit,
+    style: {
+      color: 'white'
+    }
+  })))), '   ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: " me-1 pe-3 w-auto"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    placement: "right",
+    delay: {
+      show: 700
+    },
+    overlay: deleteTt
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    size: "sm",
+    onClick: deleteemp,
+    className: "bg-dark border-0"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
+    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_7__.faTrashCan,
+    style: {
+      color: 'white'
+    }
+  }))))));
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (EmployeeRow);
 
@@ -1680,6 +1538,7 @@ var EmployeeSearch = /*#__PURE__*/function (_React$Component) {
         textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)'
       };
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+        className: "mt-3",
         style: mainStyle
       }, "Search Employee"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
         style: containerStyle
@@ -1725,53 +1584,6 @@ function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-// import React from 'react';
-// import EmployeeRow from './EmployeeRow.jsx';
-
-// // employee table which displayes a table and a heading, inside which row component is called....
-// class EmployeeTable extends React.Component {
-//     render() {
-//       const style = {
-//         textAlign: 'center', padding: '10px', border: '1px solid black',
-//       };
-
-//       const tableStyle = {
-//         border: '1px solid black', borderCollapse: 'collapse', width: '100%', margin: '20px 0',
-//       };
-
-//       const headerCellStyle = {
-//         backgroundColor: '#00008b', border: '1px solid black', color: 'white', padding: '10px', textAlign: 'center',
-//       };
-//       return (
-//         <div>
-//           <table style={tableStyle}>
-//             <thead>
-//               <tr>
-//                 <td style={headerCellStyle}>ID</td>
-//                 <td style={headerCellStyle}>First Name</td>
-//                 <td style={headerCellStyle}>Type</td>
-//                 <td style={headerCellStyle}>Status</td>
-//                 <td style={headerCellStyle}>Actions</td>
-//               </tr>
-//             </thead>
-//             <tbody>
-//               {this.props.employees.map((eachEmployee,index) => (
-//               <EmployeeRow 
-//                 rowStyle={style} 
-//                 employee={eachEmployee} 
-//                 key={eachEmployee.id} 
-//                 deleteEmployee={this.props.deleteEmployee}
-//                 terminateEmployee={this.props.terminateEmployee}
-//                 index={index}
-//               />))}
-//             </tbody>
-//           </table>
-//         </div>
-//       )
-//     }
-//   }
-
-// export default EmployeeTable;
 
 
 
@@ -1862,37 +1674,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/NavLink.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Navbar.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Nav.js");
-// import React from 'react';
-// import { NavLink } from 'react-router-dom';
-
-// function Navigation() {
-
-//   const navStyle = {
-//     display: 'flex',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     padding: '10px',
-//     backgroundColor: '#00008b',
-//   };
-
-//   const linkStyle = {
-//     textDecoration: 'none',
-//     color: '#fff',
-//     fontSize: '20px',
-//     margin: '0 20px',
-//   };
-
-//   return (
-//     <nav style={navStyle}>
-//       <NavLink to="/" style={linkStyle}>Home</NavLink>
-//       <NavLink to="/employeeAdd" style={linkStyle}>Add Employee</NavLink>
-//       <NavLink to="/employeeSearch" style={linkStyle}>Search Employee</NavLink>
-//     </nav>
-//   );
-// }
-
-// export default Navigation;
-
 
 
 
@@ -1909,7 +1690,7 @@ function Navigation() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["default"].Collapse, {
     id: "basic-navbar-nav"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    className: "mr-auto"
+    className: "mx-auto"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["default"].Item, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["default"], {
     exact: true,
     to: "/",
@@ -2076,7 +1857,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _graphQlFetch_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./graphQlFetch.js */ "./src/graphQlFetch.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Table.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Table.js");
+/* harmony import */ var _upComingRetirementFilter_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./upComingRetirementFilter.jsx */ "./src/upComingRetirementFilter.jsx");
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw new Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator.return && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw new Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, catch: function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -2093,6 +1875,7 @@ function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -2128,22 +1911,35 @@ var UpcomingRetirement = /*#__PURE__*/function (_React$Component) {
       return componentDidMount;
     }()
   }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      var params = this.props.location.search;
+      var prevparams = prevProps.location.search;
+      if (prevparams != params) {
+        this.getUpcomingRetirements();
+      }
+    }
+  }, {
     key: "getUpcomingRetirements",
     value: function () {
       var _getUpcomingRetirements = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
-        var query, result;
+        var vars, search, params, query, result;
         return _regeneratorRuntime().wrap(function _callee2$(_context2) {
           while (1) switch (_context2.prev = _context2.next) {
             case 0:
-              query = "\n            query {\n                upComingRetirement {\n                    id\n                    firstname\n                    lastname\n                    age\n                    dateOfJoining\n                    title\n                    department\n                    employeeType\n                    status\n                }\n            }";
-              _context2.next = 3;
-              return (0,_graphQlFetch_js__WEBPACK_IMPORTED_MODULE_1__.graphQlFetch)(query);
-            case 3:
+              vars = {};
+              search = this.props.location.search;
+              params = new URLSearchParams(search);
+              if (params.get('type')) vars.type = params.get('type');
+              query = "\n            query \n                upComingRetirement( $type: defaultEmployeeType )\n                {\n                    upComingRetirement(employeeType: $type) {\n                        id\n                        firstname\n                        lastname\n                        age\n                        dateOfJoining\n                        title\n                        department\n                        employeeType\n                        status\n                    }\n                \n            }";
+              _context2.next = 7;
+              return (0,_graphQlFetch_js__WEBPACK_IMPORTED_MODULE_1__.graphQlFetch)(query, vars);
+            case 7:
               result = _context2.sent;
               this.setState({
                 employees: result.upComingRetirement
               });
-            case 5:
+            case 9:
             case "end":
               return _context2.stop();
           }
@@ -2168,10 +1964,13 @@ var UpcomingRetirement = /*#__PURE__*/function (_React$Component) {
         color: 'white'
       };
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+        className: "mt-3",
         style: mainStyle
       }, "Upcoming Retirements"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
         style: mainStyle
-      }, "Employees who are retiring within the next 6 months..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }, "Employees who are retiring within the next 6 months..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_upComingRetirementFilter_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        filterName: "UpComingRetirement"
+      }), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], {
         bordered: true,
         responsive: true,
         hover: true,
@@ -2197,7 +1996,7 @@ var UpcomingRetirement = /*#__PURE__*/function (_React$Component) {
       }, "Employee Type"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", {
         style: headStyle
       }, "Status"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tbody", null, this.state.employees.map(function (employee) {
-        var retirementAge = 60 - parseInt(employee.age);
+        var retirementAge = 65 - parseInt(employee.age);
         var dateOfJoining = new Date(employee.dateOfJoining);
         var retirementDate = new Date(dateOfJoining);
         retirementDate.setFullYear(retirementDate.getFullYear() + retirementAge);
@@ -2224,6 +2023,116 @@ var UpcomingRetirement = /*#__PURE__*/function (_React$Component) {
   return UpcomingRetirement;
 }((react__WEBPACK_IMPORTED_MODULE_0___default().Component));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UpcomingRetirement);
+
+/***/ }),
+
+/***/ "./src/upComingRetirementFilter.jsx":
+/*!******************************************!*\
+  !*** ./src/upComingRetirementFilter.jsx ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/withRouter.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Dropdown.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+
+
+
+var UpComingRetirementFilter = /*#__PURE__*/function (_React$Component) {
+  _inherits(UpComingRetirementFilter, _React$Component);
+  function UpComingRetirementFilter(props) {
+    var _this;
+    _classCallCheck(this, UpComingRetirementFilter);
+    _this = _callSuper(this, UpComingRetirementFilter, [props]);
+    _defineProperty(_assertThisInitialized(_this), "showOriginalFilter", function () {
+      var search = _this.props.location.search;
+      var params = new URLSearchParams(search);
+      _this.setState({
+        type: params.get('type') || ''
+      });
+    });
+    _defineProperty(_assertThisInitialized(_this), "onChangeStatus", function (value) {
+      _this.setState({
+        type: value
+      });
+    });
+    _defineProperty(_assertThisInitialized(_this), "applyFilter", function () {
+      var type = _this.state.type;
+      var history = _this.props.history;
+      var params = new URLSearchParams();
+      if (type) params.set('type', type);
+      var search = params.toString() ? "?".concat(params.toString()) : '';
+      history.push({
+        pathname: '/upComingRetirement',
+        search: search
+      });
+    });
+    var _params = new URLSearchParams(_this.props.location.search);
+    _this.state = {
+      type: _params.get('type') || ''
+    };
+    return _this;
+  }
+  _createClass(UpComingRetirementFilter, [{
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      var search = this.props.location.search;
+      var prevSearch = prevProps.location.search;
+      if (prevSearch !== search) {
+        this.showOriginalFilter();
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var type = this.state.type;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+        className: "d-flex align-items-center"
+      }, "Employement Type: ", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        onSelect: this.onChangeStatus
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["default"].Toggle, {
+        variant: "primary",
+        className: "px-3 ms-2",
+        id: "dropdown-basic"
+      }, type ? type : 'All'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["default"].Menu, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["default"].Item, {
+        eventKey: ""
+      }, "All"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["default"].Item, {
+        eventKey: "PartTime"
+      }, "Part Time"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["default"].Item, {
+        eventKey: "FullTime"
+      }, "Full Time"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["default"].Item, {
+        eventKey: "Seasonal"
+      }, "Seasonal"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["default"].Item, {
+        eventKey: "Contract"
+      }, "Contract"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+        className: "btn btn-secondary ms-2 px-4",
+        type: "button",
+        onClick: this.applyFilter
+      }, "Apply"));
+    }
+  }]);
+  return UpComingRetirementFilter;
+}((react__WEBPACK_IMPORTED_MODULE_0___default().Component));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_router_dom__WEBPACK_IMPORTED_MODULE_2__["default"])(UpComingRetirementFilter));
 
 /***/ })
 

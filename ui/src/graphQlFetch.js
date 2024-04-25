@@ -1,4 +1,3 @@
-
 export const graphQlFetch = async (query, variables = {}) => {
     try {
       const respone = await fetch(window.ENV.URL_API, {

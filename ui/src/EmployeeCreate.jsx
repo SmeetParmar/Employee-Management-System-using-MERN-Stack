@@ -197,62 +197,33 @@ class EmployeeCreate extends React.Component {
           
       return (
         <>
-        <h1 style={mainStyle}>Add New Employee</h1>
+        <h1 className='mt-3' style={mainStyle}>Add New Employee</h1>
         <form name="employeeForm" onSubmit={this.handleSubmit} style={formStyle}>
         
-        {/* <div>
-          <label style={labelStyle}>First Name:</label>
-          <input style={inputStyle} name="firstname" value={this.state.formData.firstname} onChange={this.handleInputChange}/>
-          <span style={errorStyle}>{this.state.errors.firstname}</span>
-        </div> */}
         <Form.Group className="mb-3">
           <Form.Label controlId="firstName" className="mb-1" >First Name</Form.Label>
           <Form.Control type="text" name="firstname" value={this.state.formData.firstname} onChange={this.handleInputChange} />
           <span className='fw-bold text-danger'>{this.state.errors.firstname}</span>
         </Form.Group>
         
-        {/* <div>
-          <label style={labelStyle}>Last Name:</label>
-          <input style={inputStyle} name="lastname" value={this.state.formData.lastname} onChange={this.handleInputChange}/>
-          <span style={errorStyle}>{this.state.errors.lastname}</span>
-        </div> */}
-
         <Form.Group className='mb-3'>
           <Form.Label controlId="lastname" className="mb-1">Last Name</Form.Label>
           <Form.Control type="text" name="lastname" value={this.state.formData.lastname} onChange={this.handleInputChange} />
           <span className='fw-bold text-danger'>{this.state.errors.lastname}</span>
         </Form.Group>
-        {/* <div>
-          <label style={labelStyle}>Age:</label>
-          <input style={inputStyle} type="text" name="age" value={this.state.formData.age} onChange={this.handleInputChange} />
-          <span style={errorStyle}>{this.state.errors.age}</span>
-        </div> */}
+
         <Form.Group className='mb-3'>
           <Form.Label controlId="age" className="mb-1">Age</Form.Label>
           <Form.Control type="number" name="age" value={this.state.formData.age} onChange={this.handleInputChange} />
           <span className='fw-bold text-danger'>{this.state.errors.age}</span>
         </Form.Group>
-        {/* <div>
-          <label style={labelStyle}>Date of Joining:</label>
-          <input style={inputStyle} type="date" name="dateOfJoining" value={this.state.formData.dateOfJoining} onChange={this.handleInputChange} />
-          <span style={errorStyle}>{this.state.errors.dateOfJoining}</span>
-        </div> */}
+
         <Form.Group className='mb-3'>
           <Form.Label controlId="dateOfJoining" className="mb-1">Date Of Joining</Form.Label>
           <Form.Control type="date" name="dateOfJoining" value={this.state.formData.dateOfJoining} onChange={this.handleInputChange}/>
           <span className='fw-bold text-danger'>{this.state.errors.dateOfJoining}</span>
         </Form.Group>
-        {/* <div>
-          <label style={labelStyle}>Title:</label>
-          <select style={inputStyle} name="title" value={this.state.formData.title} onChange={this.handleInputChange}>
-              <option value="default">Select Title</option>
-              <option value="Manager">Manager</option>
-              <option value="Employee">Employee</option>
-              <option value="Director">Director</option>
-              <option value="VP">VP</option>
-          </select>
-          <span style={errorStyle}>{this.state.errors.title}</span>
-        </div> */}
+
         <Form.Group className='mb-3'>
           <Form.Label controlId="title" className="mb-1">Title</Form.Label>
           <Form.Select name="title" value={this.state.formData.title} onChange={this.handleInputChange}  >
@@ -265,17 +236,6 @@ class EmployeeCreate extends React.Component {
           <span className='fw-bold text-danger'>{this.state.errors.title}</span>
         </Form.Group>
 
-        {/* <div>
-          <label style={labelStyle}>Department:</label>
-          <select style={inputStyle} name="department" value={this.state.formData.department} onChange={this.handleInputChange}>
-              <option value="default">Select Department</option>
-              <option value="Marketing">Marketing</option>
-              <option value="Engineering">Engineering</option>
-              <option value="HR">HR</option>
-              <option value="IT">IT</option>
-          </select>
-          <span style={errorStyle}>{this.state.errors.department}</span>
-        </div> */}
         <Form.Group className='mb-3'>
         <Form.Label controlId="department" className="mb-1">Department</Form.Label>
             <Form.Select name="department" value={this.state.formData.department} onChange={this.handleInputChange} >
@@ -287,18 +247,6 @@ class EmployeeCreate extends React.Component {
             </Form.Select>
             <span className='fw-bold text-danger'>{this.state.errors.department}</span>
         </Form.Group>
-
-        {/* <div>
-          <label style={labelStyle}>Type:</label>
-          <select style={inputStyle} name="employeeType" value={this.state.formData.employeeType} onChange={this.handleInputChange}>
-              <option value="default">Select Employee Type</option>
-              <option value="FullTime">Full Time</option>
-              <option value="PartTime">Part Time</option>
-              <option value="Contract">Contract</option>
-              <option value="Seasonal">Seasonal</option>
-          </select>
-          <span style={errorStyle}>{this.state.errors.employeeType}</span>
-        </div> */}
 
         <Form.Group className='mb-3'>
         <Form.Label controlId="employeeType" className="mb-3">Type</Form.Label>

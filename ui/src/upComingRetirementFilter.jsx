@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter } from 'react-router-dom';
 import { Dropdown } from 'react-bootstrap';
 
-class EmployeeFilter extends React.Component {
+class UpComingRetirementFilter extends React.Component {
     constructor(props) {
         super(props)
         const params = new URLSearchParams(this.props.location.search)
@@ -38,7 +38,7 @@ class EmployeeFilter extends React.Component {
         const params = new URLSearchParams();
         if (type) params.set('type', type);
         const search = params.toString()? `?${params.toString()}`: '';
-        history.push({pathname: '/employee', search});
+        history.push({pathname: '/upComingRetirement', search});
     }
 
     render() {
@@ -65,4 +65,4 @@ class EmployeeFilter extends React.Component {
     }
 }
 
-export default withRouter(EmployeeFilter);
+export default withRouter(UpComingRetirementFilter);

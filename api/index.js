@@ -10,7 +10,6 @@ const portNumber = process.env.PORT || 5500;
 
 getHandler(app);
 
-
 (async () => {
     await connectToDB();
     app.listen(portNumber, function () {

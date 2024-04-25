@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class PageNotFound extends React.Component {
     render() {
       const containerStyle = {display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '20px 0'};

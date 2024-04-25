@@ -81,7 +81,7 @@ class EmployeeDirectory extends React.Component{
     
       return (
         <>
-          <h1 style={mainStyle}>Employee Table</h1>
+          <h1 className='mt-3' style={mainStyle}>Employee Table</h1>
           <EmployeeFilter filterName="Employee"/>
           <EmployeeTable 
           employees={this.state.employees}

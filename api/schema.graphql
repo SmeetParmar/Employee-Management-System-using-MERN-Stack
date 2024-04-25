@@ -61,7 +61,7 @@ type Query {
 
     oneEmployee(id: Int!): typeEmployee!
 
-    upComingRetirement: [typeEmployee!]!
+    upComingRetirement(employeeType: defaultEmployeeType): [typeEmployee!]!
 }
 
 type Mutation {

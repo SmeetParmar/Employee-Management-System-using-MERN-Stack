@@ -1,34 +1,3 @@
-// import React from 'react';
-// import { NavLink } from 'react-router-dom';
-
-// function Navigation() {
-
-//   const navStyle = {
-//     display: 'flex',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     padding: '10px',
-//     backgroundColor: '#00008b',
-//   };
-
-//   const linkStyle = {
-//     textDecoration: 'none',
-//     color: '#fff',
-//     fontSize: '20px',
-//     margin: '0 20px',
-//   };
-
-//   return (
-//     <nav style={navStyle}>
-//       <NavLink to="/" style={linkStyle}>Home</NavLink>
-//       <NavLink to="/employeeAdd" style={linkStyle}>Add Employee</NavLink>
-//       <NavLink to="/employeeSearch" style={linkStyle}>Search Employee</NavLink>
-//     </nav>
-//   );
-// }
-
-// export default Navigation;
-
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Nav, Navbar } from 'react-bootstrap';
@@ -42,7 +11,7 @@ function Navigation() {
     <Navbar style={navStyle} expand="lg" variant="dark">
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav className="mx-auto">
           <Nav.Item>
             <NavLink exact to="/" className="nav-link text-white fs-5 me-4">Home</NavLink>
           </Nav.Item>
@@ -62,6 +31,3 @@ function Navigation() {
 }
 
 export default Navigation;
-
-
-
